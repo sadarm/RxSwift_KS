@@ -28,3 +28,24 @@ public class AnyDisposable: Disposable {
         self._dispose()
     }
 }
+
+public class SingleAssignmentDisposable: Disposable {
+    
+    private var isDisposed: Bool = false
+    private var disposable: Disposable?
+    
+    public func setDisposable(_ disposable: Disposable) {
+        self.disposable = disposable
+        if self.isDisposed {
+            disposable.dispose()
+            self.disposable = nil
+        }
+    }
+    
+    public func dispose() {
+        guard !self.isDisposed else { return }
+        self.isDisposed = true
+        self.disposable?.dispose()
+        self.disposable = nil
+    }
+}
