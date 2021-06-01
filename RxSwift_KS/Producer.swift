@@ -34,14 +34,21 @@ private final class ProducerDisposable: Disposable {
     func setSink(_ sink: Disposable, subscription: Disposable) {
         self.sink = sink
         self.subscription = subscription
+        
+        if self.isDisposed {
+            sink.dispose()
+            subscription.dispose()
+            self.sink = nil
+            self.subscription = nil
+        }
     }
     
     func dispose() {
         guard !self.isDisposed else { return }
         
         self.isDisposed = true
-        self.sink!.dispose()
-        self.subscription!.dispose()
+        self.sink?.dispose()
+        self.subscription?.dispose()
         self.sink = nil
         self.subscription = nil
     }
