@@ -12,15 +12,26 @@ class ViewController: UIViewController {
     
     var downloadImage: Observable<Int> {
         return Observable.create { observer in
-            print("create")
+            print("downloadImage")
             observer.on(.next(1))
+
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
                 observer.on(.next(2))
                 observer.on(.completed)
                 observer.on(.next(2))
             })
             return Disposables.create {
-                print("disposed")
+                print("disposed downloadImage")
+            }
+        }
+    }
+    
+    func presentImage(_ image: Int) -> Observable<String> {
+        return Observable.create { observer in
+            observer.on(.next("present: \(image)"))
+            observer.on(.completed)
+            return Disposables.create {
+                print("disposed presentImage")
             }
         }
     }
@@ -30,7 +41,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.downloadImage.subscribe(AnyObserver { event in
+        self.downloadImage.flatMap { self.presentImage($0) }.subscribe(AnyObserver { event in
             print("\(event)")
         }).disposed(by: self.disposeBag)
     }
