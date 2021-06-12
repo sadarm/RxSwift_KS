@@ -36,7 +36,6 @@ private final class SkipSink<Observer: ObserverType>: ObserverType, Disposable {
     private let cancel: Disposable
     
     private var isDisposed: Bool = false
-    private var isStopped: Bool = false
     
     private let skipCount: Int
     
@@ -56,8 +55,8 @@ private final class SkipSink<Observer: ObserverType>: ObserverType, Disposable {
                 self.observer.on(event)
             }
         case .completed, .error:
-            self.isStopped = true
             self.observer.on(event)
+            self.dispose()
         }
     }
     

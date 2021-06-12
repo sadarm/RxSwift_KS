@@ -21,6 +21,8 @@
 		AD299E39266387C1002008E3 /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD299E38266387C1002008E3 /* Just.swift */; };
 		AD299E3B266478FD002008E3 /* DisposeBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD299E3A266478FD002008E3 /* DisposeBag.swift */; };
 		AD299E3D26649255002008E3 /* FlatMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD299E3C26649254002008E3 /* FlatMap.swift */; };
+		ADDF9B6726709F9E009B91CE /* Skip.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF9B6626709F9E009B91CE /* Skip.swift */; };
+		ADDF9B692670A745009B91CE /* Take.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDF9B682670A745009B91CE /* Take.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		AD299E38266387C1002008E3 /* Just.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
 		AD299E3A266478FD002008E3 /* DisposeBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisposeBag.swift; sourceTree = "<group>"; };
 		AD299E3C26649254002008E3 /* FlatMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMap.swift; sourceTree = "<group>"; };
+		ADDF9B6626709F9E009B91CE /* Skip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skip.swift; sourceTree = "<group>"; };
+		ADDF9B682670A745009B91CE /* Take.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Take.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				AD299E3626634C99002008E3 /* Producer.swift */,
 				AD299E092663470D002008E3 /* Disposable.swift */,
 				AD299E3A266478FD002008E3 /* DisposeBag.swift */,
+				ADDF9B6626709F9E009B91CE /* Skip.swift */,
+				ADDF9B682670A745009B91CE /* Take.swift */,
 			);
 			path = RxSwift_KS;
 			sourceTree = "<group>";
@@ -233,9 +239,11 @@
 				AD299E0E26634819002008E3 /* Observable.swift in Sources */,
 				AD299E39266387C1002008E3 /* Just.swift in Sources */,
 				AD299E0A2663470D002008E3 /* Disposable.swift in Sources */,
+				ADDF9B692670A745009B91CE /* Take.swift in Sources */,
 				AD299E1226634AF8002008E3 /* AnyObserver.swift in Sources */,
 				AD299E3726634C99002008E3 /* Producer.swift in Sources */,
 				AD299E0C266347C4002008E3 /* ObservableConvertibleType.swift in Sources */,
+				ADDF9B6726709F9E009B91CE /* Skip.swift in Sources */,
 				AD299E3B266478FD002008E3 /* DisposeBag.swift in Sources */,
 				AD299E05266346A4002008E3 /* ObserverType.swift in Sources */,
 				AD299E3D26649255002008E3 /* FlatMap.swift in Sources */,
