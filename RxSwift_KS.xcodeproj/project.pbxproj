@@ -15,7 +15,7 @@
 		AD299E0A2663470D002008E3 /* Disposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD299E092663470D002008E3 /* Disposable.swift */; };
 		AD299E0C266347C4002008E3 /* ObservableConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD299E0B266347C4002008E3 /* ObservableConvertibleType.swift */; };
 		AD299E0E26634819002008E3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD299E0D26634819002008E3 /* Observable.swift */; };
-		AD299E10266348B2002008E3 /* AnonymousObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD299E0F266348B2002008E3 /* AnonymousObservable.swift */; };
+		AD299E10266348B2002008E3 /* Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD299E0F266348B2002008E3 /* Create.swift */; };
 		AD299E1226634AF8002008E3 /* AnyObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD299E1126634AF8002008E3 /* AnyObserver.swift */; };
 		AD299E3726634C99002008E3 /* Producer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD299E3626634C99002008E3 /* Producer.swift */; };
 		AD299E39266387C1002008E3 /* Just.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD299E38266387C1002008E3 /* Just.swift */; };
@@ -47,7 +47,7 @@
 		AD299E092663470D002008E3 /* Disposable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disposable.swift; sourceTree = "<group>"; };
 		AD299E0B266347C4002008E3 /* ObservableConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableConvertibleType.swift; sourceTree = "<group>"; };
 		AD299E0D26634819002008E3 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		AD299E0F266348B2002008E3 /* AnonymousObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousObservable.swift; sourceTree = "<group>"; };
+		AD299E0F266348B2002008E3 /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
 		AD299E1126634AF8002008E3 /* AnyObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyObserver.swift; sourceTree = "<group>"; };
 		AD299E3626634C99002008E3 /* Producer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producer.swift; sourceTree = "<group>"; };
 		AD299E38266387C1002008E3 /* Just.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Just.swift; sourceTree = "<group>"; };
@@ -76,6 +76,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD1D63932674477400E8B806 /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				AD299E0F266348B2002008E3 /* Create.swift */,
+				AD299E3C26649254002008E3 /* FlatMap.swift */,
+				AD299E38266387C1002008E3 /* Just.swift */,
+				ADDF9B6626709F9E009B91CE /* Skip.swift */,
+				ADDF9B682670A745009B91CE /* Take.swift */,
+			);
+			path = Operators;
+			sourceTree = "<group>";
+		};
 		AD299DE026634690002008E3 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +109,7 @@
 		AD299DEC26634690002008E3 /* RxSwift_KS */ = {
 			isa = PBXGroup;
 			children = (
+				AD1D63932674477400E8B806 /* Operators */,
 				AD299DED26634690002008E3 /* RxSwift_KS.h */,
 				AD299DEE26634690002008E3 /* Info.plist */,
 				AD299E04266346A4002008E3 /* ObserverType.swift */,
@@ -104,14 +117,9 @@
 				AD299E0B266347C4002008E3 /* ObservableConvertibleType.swift */,
 				AD299E07266346C3002008E3 /* ObservableType.swift */,
 				AD299E0D26634819002008E3 /* Observable.swift */,
-				AD299E38266387C1002008E3 /* Just.swift */,
-				AD299E0F266348B2002008E3 /* AnonymousObservable.swift */,
-				AD299E3C26649254002008E3 /* FlatMap.swift */,
 				AD299E3626634C99002008E3 /* Producer.swift */,
 				AD299E092663470D002008E3 /* Disposable.swift */,
 				AD299E3A266478FD002008E3 /* DisposeBag.swift */,
-				ADDF9B6626709F9E009B91CE /* Skip.swift */,
-				ADDF9B682670A745009B91CE /* Take.swift */,
 			);
 			path = RxSwift_KS;
 			sourceTree = "<group>";
@@ -234,7 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD299E10266348B2002008E3 /* AnonymousObservable.swift in Sources */,
+				AD299E10266348B2002008E3 /* Create.swift in Sources */,
 				AD299E08266346C3002008E3 /* ObservableType.swift in Sources */,
 				AD299E0E26634819002008E3 /* Observable.swift in Sources */,
 				AD299E39266387C1002008E3 /* Just.swift in Sources */,
